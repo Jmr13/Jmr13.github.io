@@ -1,0 +1,99 @@
+@import "./_variables.scss";
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 3rem 6rem;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &__links {
+            margin: 0 1rem 0 0.5rem;
+            color: grey;
+        }
+        &__ham {
+            display:none;
+        }
+    }
+
+    &__logo {
+        align-self: center;
+    }
+
+    &__link {
+        margin: 0 1rem 0 1rem;
+    }
+    &__button {
+        display: flex;
+        align-items: center;
+        background-color: $light_blue;
+        color: white;
+        padding: 1rem;
+        border-radius: 0.25rem;
+        font-weight: bold;
+    }
+}
+
+.twitter_logo {
+    margin: 0 0.5rem 0 0.5rem;
+}
+
+/*
+    Media Queries
+*/
+
+@media (max-width: $screen-lg) {
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        margin: 3rem 4rem;
+
+        &__container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &__links {
+                margin: 0 1rem 0 0.5rem;
+            }
+        }
+
+        &__logo {
+            align-self: center;
+        }
+
+        &__link {
+            margin: 0 1rem 0 1rem;
+        }
+        &__button {
+            display: flex;
+            align-items: center;
+            background-color: $light_blue;
+            color: white;
+            padding: 1rem;
+            border-radius: 0.25rem;
+            font-weight: bold;
+        }
+    }
+}
+
+@media (max-width: $screen-md) {
+    .nav {
+        margin: 3rem 3rem;
+        &__container {
+            &__links {
+                display: none;
+            }
+            &__ham {
+                display:block;
+            }
+        }
+
+        &__button {
+            display: none;
+        }
+    }
+}

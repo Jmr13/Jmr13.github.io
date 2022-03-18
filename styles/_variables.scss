@@ -1,0 +1,45 @@
+// Variables
+
+$light_blue: #2faffe;
+$powder_blue: #a8f5ff; 
+$light_gray: #f2f3f4;
+$dark_blue: #2057b6;
+$gray: #999999;
+
+// Screen Sizes
+
+$screen-sm : 576px;
+$screen-md : 768px;
+$screen-lg : 992px;
+$screen-xl : 1200px;
+
+// Mixins
+
+@mixin twitter_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $light_blue;
+    color: white;
+    border-radius: 0.25rem;
+    font-weight: bold;
+}
+  
+
+// Test Color 
+
+.blue {
+    background-color: blue;
+}
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
+
+.flex {
+    display: flex;
+}

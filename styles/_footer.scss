@@ -1,0 +1,18 @@
+@import "./_variables.scss";
+
+.footer {
+    margin: 0 6rem;
+    margin-bottom: 2rem;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+    }
+
+    &__links {
+        display: flex;
+        gap: 1.50rem;
+    }
+}

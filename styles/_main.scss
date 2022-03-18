@@ -1,0 +1,350 @@
+@import "./_variables.scss";
+
+strong {
+    color: $dark_blue;
+    font-weight: bold;
+}
+
+p {
+    margin: 1rem 0;
+    line-height: 1.5rem;
+}
+
+a {   
+    color: gray;   
+}
+
+a:active {
+    color: gray;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    margin: 3rem 6rem;
+
+    &__left {
+        width: 60%;
+        padding-top: 2rem;
+        padding-right: 2rem;
+
+        &__title {
+            font-size: 3rem;
+            margin: 1rem 0;
+        }
+
+        &__button {
+            display: flex;
+            align-items: center;
+            margin: 1.5rem 0;
+
+            &__twitter {
+                @include twitter_button;
+                padding: 1rem 1rem;
+                margin: 0 1rem 0 0;
+            }
+
+            .learn_more {
+                color: $dark_blue;
+                font-weight: bold;
+            }
+        }
+    }
+
+    &__right {
+        width: 40%;
+        display: flex;
+        align-items: center;
+        &__img__desktop {
+            width: 100%;
+            height: auto;
+        }
+        &__img__tablet {
+            width: 100%;
+            height: auto;
+            display: none;
+        }
+    }
+}
+
+.feature {
+    margin: 3rem 6rem;
+
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+
+        .card_feature {
+            width: 48%;
+            margin: 1.5rem 0;
+            padding: 1.5rem;
+            border: 1px solid $gray;
+            border-radius: 0.25rem;
+            
+            &__icon {
+                padding: 1rem 0;
+            }
+        }
+    }
+}
+
+.testimonials {
+    padding: 3rem 0;
+    background-color: $powder_blue;
+
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content: space-between;
+        margin: 3rem 6rem;
+    }
+
+    &__title {
+        align-self: flex-start;
+        width: 100%;
+    }
+
+    .card_testimonials {
+        display: flex;
+        justify-content: space-between;
+        flex-flow: row wrap;
+        width: 30%;
+        background-color: white;
+        border-radius: 0.25rem;
+        margin: 1.5rem 0;
+        padding: 1.5rem;
+
+        &__info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 1rem 0;
+        }
+
+        &__details {
+            display: flex;
+            flex-direction: row;
+        }
+
+        &__footer {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+
+            &__likes {
+                display: flex;
+                gap: .50rem;
+            }
+        }
+    }
+}
+
+.subscription {
+    margin: 3rem 6rem;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+
+        &__title {
+            text-align: center;
+        }
+    }
+
+    .card_subscription {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem 2rem;
+        border-radius: 0.25rem;
+        border: 1px solid orange;
+        width: 50%;
+
+        &__title {
+            align-self: flex-start;
+            margin: 1rem 1rem;
+        }
+
+        &__info {
+            display: flex;
+            margin: 1rem 1rem;
+            align-self: flex-start;
+            gap: 1rem;
+        }
+
+        &__button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $light_blue;
+            color: white;
+            padding: 1rem;
+            border-radius: 0.25rem;
+            font-weight: bold;
+            width: 95%;
+            margin: 1rem 1rem;
+        }
+    }
+}
+
+/*
+    Media Queries
+*/
+
+// @media (min-width: $screen-md) and (max-width: 1200px) {
+
+// }
+
+@media (max-width: $screen-lg) {
+    .hero {
+        flex-direction: column-reverse;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+
+        &__left {
+            width: 85%;
+            margin: 0;
+            padding: 0;
+
+            &__title {
+                width: 100%;
+            }
+    
+            &__button {
+                display: flex;
+                align-items: center;
+                margin: 1.5rem 0;
+    
+                &__twitter {
+                    @include twitter_button;
+                    padding: 1rem 1rem;
+                    margin: 0 1rem 0 0;
+                }
+            }
+
+        }
+
+        &__right {
+            width: 85%;
+            &__img__desktop {
+                display: none;
+            }
+            &__img__tablet {
+                display: block;
+            }
+        }
+    }
+
+    .feature {
+        margin: 0;
+        padding: 3rem 4rem;
+        width: 100%;
+
+        &__container {
+            .card_feature {
+                width: 100%;
+            }
+        }
+    }
+
+    .testimonials {
+        
+        &__container {
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 3rem 4rem;
+        }
+
+        .card_testimonials {
+            width: 100%;
+            
+        }
+    }
+
+    .subscription {
+        margin: 0;
+        padding: 3rem 4rem;
+        width: 100%;
+
+        .card_subscription {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: $screen-md) {
+    .hero {
+        &__left {
+            width: 88%;
+
+            &__button {
+                display: flex;
+                flex-flow: column wrap;
+                align-items: center;
+
+                &__twitter {
+                    width: 100%;
+                }
+                .learn_more {
+                    padding: 2rem 0;
+                }
+            }
+        }
+
+        &__right {
+            width: 88%;
+            &__img__desktop {
+                display: block;
+            }
+            &__img__tablet {
+                display: none;
+            }
+        }
+    }
+
+    .feature {
+        margin: 0;
+        padding: 2rem 3rem;
+
+        &__container {
+
+            .card_feature {
+                width: 100%;
+            }
+        }
+    }
+
+    .testimonials {
+        margin: 0;
+        padding: 0;
+
+        &__container {
+            padding: 2rem 3rem;
+            margin: 0;
+        }
+
+        .card_testimonials {
+            width: 100%;
+        }
+    }
+
+    .subscription {
+        margin: 0;
+        padding: 2rem 3rem;
+        width: 100%;
+
+        .card_subscription {
+            width: 100%;
+        }
+    }
+}
