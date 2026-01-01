@@ -1,0 +1,11 @@
+title:
+email:
+description:
+baseurl:
+url:
+twitter_username:
+github_username:
+
+theme: null
+plugins:
+  - jekyll-feed
